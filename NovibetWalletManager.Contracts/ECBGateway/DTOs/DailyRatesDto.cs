@@ -8,7 +8,7 @@ namespace NovibetWalletManager.Contracts.ECBGateway.DTOs
 {
     public class DailyRatesDto
     {
-        public string Date {  get; set; }
+        public string Date { get; set; } = null!;
         public List<CurrencyRateDto> Rates { get; set; } = 
             new List<CurrencyRateDto>();
     }

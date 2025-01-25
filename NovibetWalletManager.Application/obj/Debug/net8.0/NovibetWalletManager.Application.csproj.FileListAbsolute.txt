@@ -13,3 +13,4 @@ C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.A
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\refint\NovibetWalletManager.Application.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.pdb
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\ref\NovibetWalletManager.Application.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.sourcelink.json

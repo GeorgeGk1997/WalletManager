@@ -17,3 +17,4 @@ C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.I
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Infrastructure\obj\Debug\net8.0\ref\NovibetWalletManager.Infrastructure.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Infrastructure\bin\Debug\net8.0\NovibetWalletManager.Infrastructure.runtimeconfig.json
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Infrastructure\obj\Debug\net8.0\NovibetWalletManager.Infrastructure.genruntimeconfig.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Infrastructure\obj\Debug\net8.0\NovibetWalletManager.Infrastructure.sourcelink.json

@@ -5,10 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NovibetWalletManager.Contracts.ECBGateway.Interfaces
+namespace NovibetWalletManager.Contracts.ECBGateway
 {
-    public interface IEcbGatewayService
-    {
-        Task<DailyRatesDto> GetDailyRatesAsync();
-    }
+    public record GetCurrencyRateECBResponse(DailyRatesDto DailyRatesDto);
 }

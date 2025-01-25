@@ -145,3 +145,10 @@ C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.A
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Ardalis.SmartEnum.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\obj\Debug\net8.0\NovibetWalletManager.Api.sourcelink.json
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll

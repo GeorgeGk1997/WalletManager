@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "NovibetWalletManager.Api.Controllers.ECBController",
+    "Method": "GetCurrenciesRateECB",
+    "RelativePath": "api/ECB",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NovibetWalletManager.Api.Controllers.WalletsController",
     "Method": "CreateWallet",
     "RelativePath": "api/Wallets",

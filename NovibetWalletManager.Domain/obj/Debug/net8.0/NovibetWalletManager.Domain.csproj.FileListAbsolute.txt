@@ -10,3 +10,4 @@ C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.D
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.pdb
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\ref\NovibetWalletManager.Domain.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.csproj.AssemblyReference.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.sourcelink.json

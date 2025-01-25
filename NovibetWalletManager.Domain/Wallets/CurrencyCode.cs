@@ -10,6 +10,7 @@ namespace NovibetWalletManager.Domain.Wallets
     public class CurrencyCode : SmartEnum<CurrencyCode>
     {
         public static readonly CurrencyCode EUR = new(nameof(EUR), 0);
+        public static readonly CurrencyCode USD = new(nameof(USD), 1);
         public static readonly CurrencyCode JPY = new(nameof(JPY), 2);
         public static readonly CurrencyCode BGN = new(nameof(BGN), 3);
         public static readonly CurrencyCode CZK = new(nameof(CZK), 4);

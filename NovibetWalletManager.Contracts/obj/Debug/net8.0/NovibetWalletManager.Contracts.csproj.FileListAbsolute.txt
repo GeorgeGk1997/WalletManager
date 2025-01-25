@@ -9,3 +9,4 @@ C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.C
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Contracts\obj\Debug\net8.0\refint\NovibetWalletManager.Contracts.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Contracts\obj\Debug\net8.0\NovibetWalletManager.Contracts.pdb
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Contracts\obj\Debug\net8.0\ref\NovibetWalletManager.Contracts.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Contracts\obj\Debug\net8.0\NovibetWalletManager.Contracts.sourcelink.json

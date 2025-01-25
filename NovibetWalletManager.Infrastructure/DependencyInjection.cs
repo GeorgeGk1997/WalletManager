@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using NovibetWalletManager.Application.Common.Interfaces;
+using NovibetWalletManager.Infrastructure.Common.Persistence.Clients;
 using NovibetWalletManager.Infrastructure.Common.Persistence.DbContexts;
+using NovibetWalletManager.Infrastructure.Common.Persistence.Parsers;
+using NovibetWalletManager.Infrastructure.CurrenciesRates;
 using NovibetWalletManager.Infrastructure.Wallets.Persistence;
 
 namespace NovibetWalletManager.Infrastructure
@@ -24,6 +27,11 @@ namespace NovibetWalletManager.Infrastructure
             );
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<WalletManagementContext>());
             services.AddScoped<IWalletRepository, WalletsRepository>();
+            services.AddScoped<IECBClient, ECBClient>();
+
+            services.AddScoped<ECBHttpClient>();
+            services.AddScoped<ECBResponseParser>();
+            services.AddHttpClient();
             return services;
         }
     }
