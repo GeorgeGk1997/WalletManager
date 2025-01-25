@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "NovibetWalletManager.Api.Controllers.WalletsController",
+    "Method": "CreateWallet",
+    "RelativePath": "api/Wallets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NovibetWalletManager.Contracts.Wallets.CreateWalletRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovibetWalletManager.Api.Controllers.WalletsController",
+    "Method": "GetWallet",
+    "RelativePath": "api/Wallets/{walletId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "walletId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

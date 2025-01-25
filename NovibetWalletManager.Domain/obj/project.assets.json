@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Ardalis.SmartEnum/8.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Ardalis.SmartEnum.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Ardalis.SmartEnum.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ardalis.SmartEnum/8.2.0": {
+      "sha512": "P1CLI2okpzHjOJnZMYLnzcyu1/fUJEYK1X4JSnal2TPmovrUTtXK6Sn78D2JgKUdwjSeWddnRveMj+BEZoksvg==",
+      "type": "package",
+      "path": "ardalis.smartenum/8.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "ardalis.smartenum.8.2.0.nupkg.sha512",
+        "ardalis.smartenum.nuspec",
+        "icon.png",
+        "lib/net6.0/Ardalis.SmartEnum.dll",
+        "lib/net6.0/Ardalis.SmartEnum.xml",
+        "lib/net7.0/Ardalis.SmartEnum.dll",
+        "lib/net7.0/Ardalis.SmartEnum.xml",
+        "lib/net8.0/Ardalis.SmartEnum.dll",
+        "lib/net8.0/Ardalis.SmartEnum.xml",
+        "lib/netstandard2.0/Ardalis.SmartEnum.dll",
+        "lib/netstandard2.0/Ardalis.SmartEnum.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Ardalis.SmartEnum >= 8.2.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\g.gkourlias\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\g.gkourlias\\Documents\\myProjects\\novi_assessment\\NovibetWalletManager.Domain\\NovibetWalletManager.Domain.csproj",
+      "projectName": "NovibetWalletManager.Domain",
+      "projectPath": "C:\\Users\\g.gkourlias\\Documents\\myProjects\\novi_assessment\\NovibetWalletManager.Domain\\NovibetWalletManager.Domain.csproj",
+      "packagesPath": "C:\\Users\\g.gkourlias\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\g.gkourlias\\Documents\\myProjects\\novi_assessment\\NovibetWalletManager.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\g.gkourlias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Ardalis.SmartEnum": {
+            "target": "Package",
+            "version": "[8.2.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

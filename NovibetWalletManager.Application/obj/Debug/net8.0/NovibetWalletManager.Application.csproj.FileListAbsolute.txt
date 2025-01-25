@@ -1,0 +1,15 @@
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\bin\Debug\net8.0\NovibetWalletManager.Application.deps.json
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\bin\Debug\net8.0\NovibetWalletManager.Application.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\bin\Debug\net8.0\NovibetWalletManager.Application.pdb
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\bin\Debug\net8.0\NovibetWalletManager.Domain.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\bin\Debug\net8.0\NovibetWalletManager.Domain.pdb
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.csproj.AssemblyReference.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.AssemblyInfoInputs.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.AssemblyInfo.cs
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.csproj.CoreCompileInputs.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetW.7805BD05.Up2Date
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\refint\NovibetWalletManager.Application.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\NovibetWalletManager.Application.pdb
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Application\obj\Debug\net8.0\ref\NovibetWalletManager.Application.dll

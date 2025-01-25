@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NovibetWalletManager.Api.props" />
+</Project>

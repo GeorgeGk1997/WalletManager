@@ -1,0 +1,12 @@
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\bin\Debug\net8.0\NovibetWalletManager.Domain.deps.json
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\bin\Debug\net8.0\NovibetWalletManager.Domain.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\bin\Debug\net8.0\NovibetWalletManager.Domain.pdb
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.AssemblyInfoInputs.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.AssemblyInfo.cs
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\refint\NovibetWalletManager.Domain.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.pdb
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\ref\NovibetWalletManager.Domain.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Domain\obj\Debug\net8.0\NovibetWalletManager.Domain.csproj.AssemblyReference.cache

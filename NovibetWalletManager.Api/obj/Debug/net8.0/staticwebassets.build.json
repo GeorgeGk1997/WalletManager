@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AUfSgwE4wOxNzYrOZBSJl8ExKjpsErhnS+PWt+F4ZDo=",
+  "Source": "NovibetWalletManager.Api",
+  "BasePath": "_content/NovibetWalletManager.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

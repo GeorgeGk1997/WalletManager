@@ -1,0 +1,6 @@
+@NovibetWalletManager.Api_HostAddress = http://localhost:5143
+
+GET {{NovibetWalletManager.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

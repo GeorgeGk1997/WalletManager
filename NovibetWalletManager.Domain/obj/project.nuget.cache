@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fKjg8KpmPUk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\g.gkourlias\\Documents\\myProjects\\novi_assessment\\NovibetWalletManager.Domain\\NovibetWalletManager.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\g.gkourlias\\.nuget\\packages\\ardalis.smartenum\\8.2.0\\ardalis.smartenum.8.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
