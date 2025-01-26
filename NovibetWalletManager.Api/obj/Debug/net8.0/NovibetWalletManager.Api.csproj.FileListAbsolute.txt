@@ -152,3 +152,7 @@ C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.A
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
 C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Quartz.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Quartz.AspNetCore.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
+C:\Users\g.gkourlias\Documents\myProjects\novi_assessment\NovibetWalletManager.Api\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
