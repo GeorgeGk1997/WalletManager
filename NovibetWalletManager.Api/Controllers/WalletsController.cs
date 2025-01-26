@@ -25,17 +25,8 @@ namespace NovibetWalletManager.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWallet(CreateWalletRequest request)
         {
-            if(!DomainCurrencyCode.TryFromName(request.Currency.ToString(), out var currencyCode))
-            {
-                return Problem(
-                    statusCode: StatusCodes.Status400BadRequest,
-                    detail: "Invoke wrong currency"
-                );  
-            }
-
             var cmd = new CreateWalletCmd(
-                request.Balance,
-                currencyCode
+                request.Balance
             ); 
 
             var createWalletResult = await _mediator.Send( cmd );
@@ -43,7 +34,8 @@ namespace NovibetWalletManager.Api.Controllers
             return createWalletResult.MatchFirst(
 
                 wallet => Ok(new CreateWalletResponse(
-                    createWalletResult.Value.Id, request.Balance, request.Currency)),
+                    createWalletResult.Value.Id, request.Balance,
+                    (Currency)Enum.Parse(typeof(Currency), createWalletResult.Value.CurrencyCode.Name, true))),
 
                 error => Problem()
             );

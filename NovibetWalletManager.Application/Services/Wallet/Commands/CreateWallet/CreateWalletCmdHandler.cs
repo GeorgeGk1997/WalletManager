@@ -27,7 +27,7 @@ namespace NovibetWalletManager.Application.Services.Wallet.Commands.CreateWallet
         {
             //create wallet
             var wallet = new WalletModel(
-                request.Balance, request.Currency
+                request.Balance
             );
 
             //add it to db

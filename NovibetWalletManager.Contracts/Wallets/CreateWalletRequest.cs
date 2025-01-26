@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 
 namespace NovibetWalletManager.Contracts.Wallets
 {
-   public record CreateWalletRequest(decimal Balance, Currency Currency);
+    //public record CreateWalletRequest(decimal Balance, Currency Currency);
+    public record CreateWalletRequest(decimal Balance);
 }

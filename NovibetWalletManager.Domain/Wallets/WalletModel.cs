@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,11 @@ namespace NovibetWalletManager.Domain.Wallets
         public decimal? Balance { get; private set; }
         public CurrencyCode CurrencyCode { get; private set; } = null!;
 
-        public WalletModel(decimal balance, CurrencyCode currencyCode, Guid? id = null)
+        public WalletModel(decimal balance, CurrencyCode? currencyCode=null, Guid? id = null)
         {
             Id = id ?? Guid.NewGuid();
             Balance = balance;
-            CurrencyCode = currencyCode;
+            CurrencyCode = currencyCode ?? new CurrencyCode("EUR",0);
         }
 
         private WalletModel()
