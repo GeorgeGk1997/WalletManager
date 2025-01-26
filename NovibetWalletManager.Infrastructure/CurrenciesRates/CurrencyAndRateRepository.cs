@@ -1,5 +1,8 @@
-﻿using NovibetWalletManager.Application.Common.Interfaces;
+﻿using Microsoft.Extensions.Options;
+using NovibetWalletManager.Application.Common.Interfaces;
+using NovibetWalletManager.Infrastructure.Common.Persistence.Configs;
 using Npgsql;
+using Quartz.Xml.JobSchedulingData20;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +16,14 @@ namespace NovibetWalletManager.Infrastructure.CurrenciesRates
 
         private readonly string _connectionString;
 
-        public CurrencyAndRateRepository(string connectionString)
+        //public CurrencyAndRateRepository(string connectionString)
+        //{
+        //    _connectionString = connectionString;
+        //}
+
+        public CurrencyAndRateRepository(IOptions<DatabaseConfig> config)
         {
-            _connectionString = connectionString;
+            _connectionString = config.Value.NovibetWalletManagerDb;
         }
 
         public async Task UpdateCurrencyRatesOnDbAsync(Domain.CurrenciesRates.CurrenciesRates currenciesRates)
@@ -30,8 +38,9 @@ namespace NovibetWalletManager.Infrastructure.CurrenciesRates
                     date = EXCLUDED.date;
             ";
 
-            var strr = "Server=localhost;Database=WalletManagement;Port=5432;Username=postgres;Password=postgres";
-            await using var connection = new NpgsqlConnection(strr);
+          
+            var strr = _connectionString;
+            await using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
 
             await using var transaction = await connection.BeginTransactionAsync();

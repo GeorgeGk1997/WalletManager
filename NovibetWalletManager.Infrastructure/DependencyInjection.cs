@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NovibetWalletManager.Application.Common.Interfaces;
 using NovibetWalletManager.Application.Services.ECB.Commands;
 using NovibetWalletManager.Infrastructure.Common.Persistence.Clients;
+using NovibetWalletManager.Infrastructure.Common.Persistence.Configs;
 using NovibetWalletManager.Infrastructure.Common.Persistence.DbContexts;
 using NovibetWalletManager.Infrastructure.Common.Persistence.Jobs;
 using NovibetWalletManager.Infrastructure.Common.Persistence.Parsers;
@@ -24,18 +25,23 @@ namespace NovibetWalletManager.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+            services.Configure<DatabaseConfig>(configuration.GetSection("ConnectionStrings"));
+
             services.AddDbContext<WalletManagementContext>(options =>
             options.UseNpgsql(
-                "Host=localhost;Port=5432;Database=WalletManagement;Username=postgres;Password=postgres",
+                configuration.GetConnectionString("NovibetWalletManagerDb")!,
                 b => b.MigrationsAssembly("NovibetWalletManager.Infrastructure")
                 )
             );
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<WalletManagementContext>());
             services.AddScoped<IWalletRepository, WalletsRepository>();
-            services.AddScoped<ICurrencyRateRepository, CurrencyAndRateRepository>(
-                provider => new CurrencyAndRateRepository(configuration.GetConnectionString("NovibetWalletMaanagerDb")!));
-            services.AddScoped<IECBClient, ECBClient>();
+            services.AddScoped<ICurrencyRateRepository, CurrencyAndRateRepository>();
 
+            //auto einai an den xreisimopoiiso to option pattern
+            //services.AddScoped<ICurrencyRateRepository, CurrencyAndRateRepository>(
+            //    provider => new CurrencyAndRateRepository(configuration.GetConnectionString("NovibetWalletManagerDb")!));
+            
+            services.AddScoped<IECBClient, ECBClient>();
             services.AddScoped<ECBHttpClient>();
             services.AddScoped<ECBResponseParser>();
             services.AddScoped<UpdateCurrencyRatesCommand>();
@@ -55,7 +61,6 @@ namespace NovibetWalletManager.Infrastructure
                     .WithIdentity("UpdateRatesTrigger")
                     .WithSimpleSchedule(x => x.WithIntervalInMinutes(1).RepeatForever()));
             });
-
 
             //some notes for me 
             //false quartz immediately terminates and stop any running jobs
