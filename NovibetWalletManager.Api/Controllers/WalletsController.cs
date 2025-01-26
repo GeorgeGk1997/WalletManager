@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NovibetWalletManager.Application.Services;
+using NovibetWalletManager.Application.Services.Wallet.Commands.AdjustWalletBalance;
 using NovibetWalletManager.Application.Services.Wallet.Commands.CreateWallet;
 using NovibetWalletManager.Application.Services.Wallet.Queries;
 using NovibetWalletManager.Contracts.ContractModels;
@@ -58,6 +59,39 @@ namespace NovibetWalletManager.Api.Controllers
                 wallet => Ok(new CreateWalletResponse(
                     getWalletResult.Value.Id,
                     getWalletResult.Value.Balance == null? 0m:(decimal) getWalletResult.Value.Balance,
+                    Enum.Parse<Currency>(getWalletResult.Value.CurrencyCode.Name))),
+
+                error => Problem()
+            );
+        }
+
+        [HttpPost("{walletId:guid}/adjustbalance")]
+        public async Task<IActionResult> AdjustWalletBalance(
+            [FromRoute] Guid walletId,
+            [FromQuery] decimal amount,
+            [FromQuery] Currency currency,
+            [FromQuery] string strategy
+        )
+        {
+            if (amount <= 0)
+            {
+                return BadRequest("The amount must be a positive number.");
+            }
+
+            var command = new AdjustWalletBalanceCmd(
+                walletId,
+                amount,
+                DomainCurrencyCode.FromName(currency.ToString()),
+                strategy
+            );
+
+            var getWalletResult = await _mediator.Send(command);
+
+            return getWalletResult.MatchFirst(
+
+                wallet => Ok(new CreateWalletResponse(
+                    getWalletResult.Value.Id,
+                    getWalletResult.Value.Balance == null ? 0m : (decimal)getWalletResult.Value.Balance,
                     Enum.Parse<Currency>(getWalletResult.Value.CurrencyCode.Name))),
 
                 error => Problem()

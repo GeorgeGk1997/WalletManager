@@ -11,5 +11,6 @@ namespace NovibetWalletManager.Application.Common.Interfaces
     {
         Task AddWalletAsync(WalletModel wallet);
         Task<WalletModel> GetWalletByIdAsync(Guid id);
+        Task UpdateBalanceOnDbAsync(Guid id, decimal newBalance);
     }
 }

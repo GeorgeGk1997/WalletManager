@@ -32,5 +32,19 @@ namespace NovibetWalletManager.Infrastructure.Wallets.Persistence
         {
             return await _dbContext.Wallets.FindAsync(id);
         }
+
+        public async Task UpdateBalanceOnDbAsync(Guid id, decimal newBalance)
+        {
+            var wallet = await GetWalletByIdAsync(id);
+            if (wallet == null)
+            {
+                throw new Exception($"Wallet with ID {id} not found.");
+            }
+
+            wallet.Balance = newBalance;
+
+            await _dbContext.SaveChangesAsync();
+        }
+
     }
 }
