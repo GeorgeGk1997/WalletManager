@@ -26,20 +26,18 @@ namespace NovibetWalletManager.Infrastructure.CurrenciesRates
             _connectionString = config.Value.NovibetWalletManagerDb;
         }
 
-        public async Task UpdateCurrencyRatesOnDbAsync(Domain.CurrenciesRates.CurrenciesRates currenciesRates)
+        public async Task UpdateCurrencyRatesOnDbAsync(Domain.CurrenciesRates.CurrenciesRates currenciesRates, int batchSize = 10)
         {
-           
+
             var sql = @"
                 INSERT INTO currency_rates (currency, rate, date)
-                VALUES (@Currency, @Rate, @Date)
+                VALUES {0}
                 ON CONFLICT (currency, date)
                 DO UPDATE SET 
                     rate = EXCLUDED.rate,
                     date = EXCLUDED.date;
             ";
 
-          
-            var strr = _connectionString;
             await using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
 
@@ -47,13 +45,32 @@ namespace NovibetWalletManager.Infrastructure.CurrenciesRates
             try
             {
                 DateTime date = DateTime.Parse(currenciesRates.Date);
-                foreach (var currencyAndRate in currenciesRates.Rates)
-                {
-                    await using var command = new NpgsqlCommand(sql, connection, transaction);
-                    command.Parameters.AddWithValue("Currency", currencyAndRate.CurrencyCode.Name);
-                    command.Parameters.AddWithValue("Rate", currencyAndRate.Rate);
-                    command.Parameters.AddWithValue("Date", date);
 
+                // split data on batches
+                var rateChunks = currenciesRates.Rates.Chunk(batchSize);
+
+                foreach (var chunk in rateChunks)
+                {
+                    var parameterValues = new List<string>();
+                    var parameters = new List<NpgsqlParameter>();
+                    int parameterIndex = 0;
+
+                    foreach (var currencyAndRate in chunk)
+                    {
+                        parameterValues.Add($"(@Currency{parameterIndex}, @Rate{parameterIndex}, @Date{parameterIndex})");
+
+                        parameters.Add(new NpgsqlParameter($"Currency{parameterIndex}", currencyAndRate.CurrencyCode.Name));
+                        parameters.Add(new NpgsqlParameter($"Rate{parameterIndex}", currencyAndRate.Rate+1));
+                        parameters.Add(new NpgsqlParameter($"Date{parameterIndex}", date));
+
+                        parameterIndex++;
+                    }
+
+                    var valuesClause = string.Join(", ", parameterValues);
+                    var finalSql = string.Format(sql, valuesClause);
+
+                    await using var command = new NpgsqlCommand(finalSql, connection, transaction);
+                    command.Parameters.AddRange(parameters.ToArray());
                     await command.ExecuteNonQueryAsync();
                 }
 
@@ -64,7 +81,6 @@ namespace NovibetWalletManager.Infrastructure.CurrenciesRates
                 await transaction.RollbackAsync();
                 throw;
             }
-            
         }
     }
 }

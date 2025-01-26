@@ -9,6 +9,6 @@ namespace NovibetWalletManager.Application.Common.Interfaces
 {
     public interface ICurrencyRateRepository
     {
-        Task UpdateCurrencyRatesOnDbAsync(CurrenciesRates currenciesRates);
+        Task UpdateCurrencyRatesOnDbAsync(CurrenciesRates currenciesRates, int batchSize=10);
     }
 }
