@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NovibetWalletManager.Application.Common.Interfaces;
 using NovibetWalletManager.Application.Services.ECB.Commands;
+using NovibetWalletManager.Infrastructure.Common.Persistence.Caching;
 using NovibetWalletManager.Infrastructure.Common.Persistence.Clients;
 using NovibetWalletManager.Infrastructure.Common.Persistence.Configs;
 using NovibetWalletManager.Infrastructure.Common.Persistence.DbContexts;
@@ -18,6 +19,7 @@ using NovibetWalletManager.Infrastructure.CurrenciesRates;
 using NovibetWalletManager.Infrastructure.Wallets.Persistence;
 using Quartz;
 using Quartz.Simpl;
+using StackExchange.Redis;
 
 namespace NovibetWalletManager.Infrastructure
 {
@@ -28,10 +30,10 @@ namespace NovibetWalletManager.Infrastructure
             services.Configure<DatabaseConfig>(configuration.GetSection("ConnectionStrings"));
 
             services.AddDbContext<WalletManagementContext>(options =>
-            options.UseNpgsql(
-                configuration.GetConnectionString("NovibetWalletManagerDb")!,
-                b => b.MigrationsAssembly("NovibetWalletManager.Infrastructure")
-                )
+                options.UseNpgsql(
+                    configuration.GetConnectionString("NovibetWalletManagerDb")!,
+                    b => b.MigrationsAssembly("NovibetWalletManager.Infrastructure")
+                    )
             );
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<WalletManagementContext>());
             services.AddScoped<IWalletRepository, WalletsRepository>();
@@ -69,6 +71,13 @@ namespace NovibetWalletManager.Infrastructure
             {
                 options.WaitForJobsToComplete = false; // Graceful shutdown
             });
+
+            //REDIS CONGIG
+            var redisConnStr = configuration.GetSection("Redis:ConnectionString").Value;
+            var redis = ConnectionMultiplexer.Connect((string)redisConnStr!);
+            services.AddSingleton<IConnectionMultiplexer>(redis);
+            services.AddSingleton<ICacheService, RedisCaching>();
+
             return services;
         }
     }

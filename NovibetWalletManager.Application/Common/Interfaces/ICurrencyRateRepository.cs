@@ -13,5 +13,10 @@ namespace NovibetWalletManager.Application.Common.Interfaces
         Task UpdateCurrencyRatesOnDbAsync(CurrenciesRates currenciesRates, int batchSize=10);
 
         Task<decimal?> GetRateFromCurrencyDbAsync(CurrencyCode currency);
+
+        Task<IEnumerable<CurrencyRateModelForDb>> GetCurrencyRatesRedisDbAsync();
+        Task<decimal> GetRateFromCurrencyRedisDbAsync(CurrencyCode currency);
+
+        Task<IEnumerable<CurrencyRateModelForDb>> GetRatesDbAsync();
     }
 }

@@ -57,7 +57,8 @@ namespace NovibetWalletManager.Application.Services.Wallet.Commands.AdjustWallet
             }
             else
             {
-                var rate = await _currencyRateRepository.GetRateFromCurrencyDbAsync(request.currency);
+                //var rate = await _currencyRateRepository.GetRateFromCurrencyDbAsync(request.currency);
+                var rate = await _currencyRateRepository.GetRateFromCurrencyRedisDbAsync(request.currency);
                 var amountToEuro = request.amount / rate;
                 var newBalance = _balanceAdjustmentStrategyFactory
                                     .GetStrategy(request.strategy)

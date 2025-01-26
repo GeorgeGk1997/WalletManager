@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a7JW8z5qSsg=",
+  "dgSpecHash": "4CyhwrvzlGw=",
   "success": true,
   "projectFilePath": "C:\\Users\\g.gkourlias\\Documents\\myProjects\\novi_assessment\\NovibetWalletManager.Api\\NovibetWalletManager.Api.csproj",
   "expectedPackageFiles": [
@@ -49,10 +49,12 @@
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.3\\npgsql.entityframeworkcore.postgresql.9.0.3.nupkg.sha512",
+    "C:\\Users\\g.gkourlias\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\quartz\\3.13.1\\quartz.3.13.1.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\quartz.aspnetcore\\3.13.1\\quartz.aspnetcore.3.13.1.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\quartz.extensions.dependencyinjection\\3.13.1\\quartz.extensions.dependencyinjection.3.13.1.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\quartz.extensions.hosting\\3.13.1\\quartz.extensions.hosting.3.13.1.nupkg.sha512",
+    "C:\\Users\\g.gkourlias\\.nuget\\packages\\stackexchange.redis\\2.8.24\\stackexchange.redis.2.8.24.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\g.gkourlias\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

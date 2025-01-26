@@ -237,6 +237,10 @@
             "Quartz.Extensions.Hosting": {
               "target": "Package",
               "version": "[3.13.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.24, )"
             }
           },
           "imports": [

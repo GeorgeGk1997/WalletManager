@@ -38,16 +38,17 @@ namespace NovibetWalletManager.Application.Services.Wallet.Queries
             }
             else
             {
-                var rate = await _currencyRateRepository.GetRateFromCurrencyDbAsync(request.Currency);
+                //var rate = await _currencyRateRepository.GetRateFromCurrencyDbAsync(request.Currency);
+                var rate = await _currencyRateRepository.GetRateFromCurrencyRedisDbAsync(request.Currency);
 
-                return rate is null ?
-                    Error.NotFound(description: "Conversion Rates isnt found!") :
+                //return rate is null ?
+                //    Error.NotFound(description: "Conversion Rates isnt found!") :
 
-                    new WalletModel(
-                        (decimal)wallet.Balance! * (decimal)rate!,
-                        request.Currency,
-                        wallet.Id
-                    );
+                return new WalletModel(
+                    (decimal)wallet.Balance! * (decimal)rate!,
+                    request.Currency,
+                    wallet.Id
+                );
             }
 
         }
