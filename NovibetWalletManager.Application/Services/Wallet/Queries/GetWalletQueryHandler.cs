@@ -15,18 +15,40 @@ namespace NovibetWalletManager.Application.Services.Wallet.Queries
         ErrorOr<WalletModel>>
     {
         private readonly IWalletRepository _walletRepository;
-        public GetWalletQueryHandler(IWalletRepository walletRepository)
+        private readonly ICurrencyRateRepository _currencyRateRepository;
+
+        public GetWalletQueryHandler(IWalletRepository walletRepository, ICurrencyRateRepository currencyRateRepository)
         {
             _walletRepository = walletRepository; 
+            _currencyRateRepository = currencyRateRepository;
         }
+
         public async Task<ErrorOr<WalletModel>> Handle(GetWalletQuery request, CancellationToken cancellationToken)
         {
             var wallet = await _walletRepository.GetWalletByIdAsync(request.WalletId);
 
-            return
-                wallet is null ?
-                Error.NotFound(description: "Wallet with this id is not found") :
-                wallet;
+            if(wallet is null)
+            {
+                return Error.NotFound(description: "Wallet with this id is not found");
+            }
+
+            if (wallet.CurrencyCode == request.Currency)
+            {
+                return wallet;
+            }
+            else
+            {
+                var rate = await _currencyRateRepository.GetRateFromCurrencyDbAsync(request.Currency);
+
+                return rate is null ?
+                    Error.NotFound(description: "Conversion Rates isnt found!") :
+
+                    new WalletModel(
+                        (decimal)wallet.Balance! * (decimal)rate!,
+                        request.Currency,
+                        wallet.Id
+                    );
+            }
 
         }
     }

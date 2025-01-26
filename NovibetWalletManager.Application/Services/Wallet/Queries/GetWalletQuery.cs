@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 
 namespace NovibetWalletManager.Application.Services.Wallet.Queries
 {
-    public record GetWalletQuery(Guid WalletId) :
+    public record GetWalletQuery(Guid WalletId, CurrencyCode Currency) :
          IRequest<ErrorOr<WalletModel>>;
 }

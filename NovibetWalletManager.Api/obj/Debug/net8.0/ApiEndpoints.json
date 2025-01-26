@@ -37,6 +37,11 @@
         "Name": "walletId",
         "Type": "System.Guid",
         "IsRequired": true
+      },
+      {
+        "Name": "currency",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

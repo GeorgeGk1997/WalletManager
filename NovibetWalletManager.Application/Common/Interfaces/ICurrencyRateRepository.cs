@@ -1,4 +1,5 @@
 ﻿using NovibetWalletManager.Domain.CurrenciesRates;
+using NovibetWalletManager.Domain.Wallets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace NovibetWalletManager.Application.Common.Interfaces
     public interface ICurrencyRateRepository
     {
         Task UpdateCurrencyRatesOnDbAsync(CurrenciesRates currenciesRates, int batchSize=10);
+
+        Task<decimal?> GetRateFromCurrencyDbAsync(CurrencyCode currency);
     }
 }

@@ -44,14 +44,14 @@ namespace NovibetWalletManager.Api.Controllers
 
 
         [HttpGet("{walletId:guid}")]
-        public async Task<IActionResult> GetWallet(Guid walletId)
+        public async Task<IActionResult> GetWallet([FromRoute]Guid walletId, [FromQuery]Currency currency)
         {
             var query = new GetWalletQuery(
-                walletId
+                walletId,
+                DomainCurrencyCode.FromName(currency.ToString())
             );
 
             var getWalletResult = await _mediator.Send(query);
-           
 
             return getWalletResult.MatchFirst(
 

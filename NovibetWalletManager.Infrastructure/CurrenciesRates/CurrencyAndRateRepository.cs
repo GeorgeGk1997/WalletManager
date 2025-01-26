@@ -1,13 +1,16 @@
 ﻿using Microsoft.Extensions.Options;
 using NovibetWalletManager.Application.Common.Interfaces;
+using NovibetWalletManager.Domain.Wallets;
 using NovibetWalletManager.Infrastructure.Common.Persistence.Configs;
 using Npgsql;
 using Quartz.Xml.JobSchedulingData20;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace NovibetWalletManager.Infrastructure.CurrenciesRates
 {
@@ -24,6 +27,26 @@ namespace NovibetWalletManager.Infrastructure.CurrenciesRates
         public CurrencyAndRateRepository(IOptions<DatabaseConfig> config)
         {
             _connectionString = config.Value.NovibetWalletManagerDb;
+        }
+
+        public async Task<decimal?> GetRateFromCurrencyDbAsync(CurrencyCode currency)
+        {
+            const string sqlQuery  = "SELECT rate FROM currency_rates WHERE currency = @currency";
+
+            await using (var connection = new NpgsqlConnection(_connectionString))
+            {
+                await connection.OpenAsync();
+
+                await using (var command = new NpgsqlCommand(sqlQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@currency", currency.Name);
+
+                    var result = await command.ExecuteScalarAsync();
+
+                    // Return the result if not null, otherwise return null
+                    return result != DBNull.Value ? (decimal?)result : null;
+                }
+            }
         }
 
         public async Task UpdateCurrencyRatesOnDbAsync(Domain.CurrenciesRates.CurrenciesRates currenciesRates, int batchSize = 10)
