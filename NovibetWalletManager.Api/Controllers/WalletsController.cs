@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using NovibetWalletManager.Application.Services;
 using NovibetWalletManager.Application.Services.Wallet.Commands.AdjustWalletBalance;
 using NovibetWalletManager.Application.Services.Wallet.Commands.CreateWallet;
@@ -45,6 +46,7 @@ namespace NovibetWalletManager.Api.Controllers
 
 
         [HttpGet("{walletId:guid}")]
+        [EnableRateLimiting("IpRateLimit")]
         public async Task<IActionResult> GetWallet([FromRoute]Guid walletId, [FromQuery]Currency currency)
         {
             var query = new GetWalletQuery(

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovibetWalletManager.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a697c1f6f4070d2076736fe9a3c7d2d2636003b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99ba92c13e644f8aa5fe0797e60ed1d9d3b8befa")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovibetWalletManager.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovibetWalletManager.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
