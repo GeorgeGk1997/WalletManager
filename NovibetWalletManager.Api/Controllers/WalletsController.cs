@@ -46,7 +46,7 @@ namespace NovibetWalletManager.Api.Controllers
 
 
         [HttpGet("{walletId:guid}")]
-        [EnableRateLimiting("IpRateLimit")]
+        //[EnableRateLimiting("IpRateLimit")]
         public async Task<IActionResult> GetWallet([FromRoute]Guid walletId, [FromQuery]Currency currency)
         {
             var query = new GetWalletQuery(

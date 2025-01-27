@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovibetWalletManager.Applic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovibetWalletManager.Domain", "NovibetWalletManager.Domain\NovibetWalletManager.Domain.csproj", "{C0FE5FC6-2441-48E7-BE43-DA4DF8F9FD50}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovibetWalletManager.Application.Tests", "NovibetWalletManager.Application.Tests\NovibetWalletManager.Application.Tests.csproj", "{C7E92E11-81CF-4BDF-8123-57C83779DABA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C0FE5FC6-2441-48E7-BE43-DA4DF8F9FD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0FE5FC6-2441-48E7-BE43-DA4DF8F9FD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0FE5FC6-2441-48E7-BE43-DA4DF8F9FD50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E92E11-81CF-4BDF-8123-57C83779DABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E92E11-81CF-4BDF-8123-57C83779DABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E92E11-81CF-4BDF-8123-57C83779DABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E92E11-81CF-4BDF-8123-57C83779DABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

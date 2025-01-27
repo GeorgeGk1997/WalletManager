@@ -28,6 +28,8 @@ builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
 
+builder.Services.AddProblemDetails(); // global error handling
+
 var app = builder.Build();
 
 app.UseSwagger();
